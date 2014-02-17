@@ -1,0 +1,31 @@
+<h1 class="text-center">Albums List</h1>
+
+<table class="table table-hover" style="width: 80%;" align="center">
+  <thead>
+    <tr>
+      <th>Album Name</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody class="table-striped">
+    <% @albums.each do |album| %>
+      <tr class="warning">
+        <td ><%= album.title %></td>
+        <td ><%= album.description %></td>
+        <td ><%= link_to 'Show', album , :class=>"btn btn-default"%></td>
+        <td ><%= link_to 'Edit', edit_album_path(album), :class=>"btn btn-default" %></td>
+        <td ><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-default" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<center>
+<%= link_to 'New Album', new_album_path, :class=>"btn btn-default " %>
+</center>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<h1 >Album Details</h1>
+<p class="lead" align="left" >
+  <strong>Album Name : </strong>
+  <%= @album.title  %>
+</p>
+
+<p class="lead">
+  <strong>Description:</strong>
+  <%= @album.description %>
+</p>
+
+<%= link_to 'Edit', edit_album_path(@album), :class=>"btn btn-default " %> &nbsp;&nbsp;&nbsp;
+<%= link_to 'Show photos', album_photos_path(@album), :class=>"btn btn-default " %> &nbsp;&nbsp;&nbsp;
+<%= link_to 'Back', albums_path, :class=>"btn btn-default " %>

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+ <h1 >Photo Details</h1>      
+<p class="lead" align="left">
+  <strong>Name:</strong>
+  <%= @photo.name %>
+</p>
+<%= image_tag @photo.image.url("large") %>
+&nbsp;&nbsp;&nbsp;
+<%= link_to 'Edit', edit_album_photo_path(@album, @photo),:class=>"btn btn-default " %>&nbsp;&nbsp;&nbsp;
+<%= link_to 'Back', album_photos_path,:class=>"btn btn-default " %>
+<div width="600px">
+<p class="lead" align="left">
+  <strong>Description:</strong>
+  <%= @photo.description %>
+</p>
+</div>
+<h4>Comments</h4>
+<%= render @photo.comments %>
+
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
+ 
+ 

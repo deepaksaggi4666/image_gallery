@@ -1,0 +1,9 @@
+<%= form_for([@album, @photo, @photo.comments.build]) do |f| %>
+  <p>
+     <%= @comment_user%>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

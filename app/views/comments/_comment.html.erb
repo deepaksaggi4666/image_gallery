@@ -1,0 +1,10 @@
+<p class="lead">
+  <!--<strong>Commenter:</strong>-->
+  <%= @comment_user %> ::
+  <%= comment.body %>
+</p>
+<p class="lead">
+  <%= link_to 'Destroy Comment', [@album, @photo, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' },:class=>"btn btn-default" %>
+</p>
